@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER "aa"
 LABEL "purpose"="webserver pratice"
 RUN apt-get update && apt-get install -y apache2
-ADD test.html /var/www/html
+ADD ./test.html /var/www/html
 WORKDIR /var/www/html
 RUN ["/bin/bash", "-C", "echo hello >> test.html"]
 EXPOSE 80
